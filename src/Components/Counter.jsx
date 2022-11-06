@@ -16,7 +16,7 @@ export default function Counter() {
       <div className="counter-container">
         <input
           type="text"
-          placeholder="Set Counter Value"
+          placeholder="Count Value"
           onChange={(e) =>
             dispatch({ type: ACTIONS.SET_VALUE, payload: e.target.value })
           }
@@ -29,7 +29,7 @@ export default function Counter() {
               dispatch({ type: ACTIONS.ADD });
             }}
           >
-            Increment
+            Increase
           </button>
           <button
             className="dlt-btn"
@@ -37,7 +37,7 @@ export default function Counter() {
               dispatch({ type: ACTIONS.REDUCE });
             }}
           >
-            Decrement
+            Decrease
           </button>
         </div>
 
