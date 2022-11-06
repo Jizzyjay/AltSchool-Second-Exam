@@ -1,7 +1,7 @@
 import React from "react";
 import useCounter from "./useCounter";
 import "../Styles/Counter.css";
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 
 export default function Counter() {
   const { count, dispatch, ACTIONS } = useCounter();
