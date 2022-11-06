@@ -1,23 +1,20 @@
-import React, { useState } from "react";
+// import React from "react";
+// import "./Fallback.scss";
 
-export default function TestError() {
-  const [errorText, setErrorText] = useState("");
-
-  function handleError(e) {
-    if (e.target.value.toUpperCase() === "BOMB") {
-      setErrorText("BOMB");
-    }
-  }
-  if (errorText === "BOMB") {
-    throw new Error("Error Boundary. Checked.");
-  }
-  return (
-    <div className="test-error">
-      <input
-        onChange={handleError}
-        type="text"
-        placeholder="Enter bomb to check error boundary"
-      />
+const Error = ({ componentStack, error }) => (
+  <section className="fallback">
+    <header className="fallback__header">
+      <h3 className="fallback__title">Oops! An error occured!</h3>
+    </header>
+    <div className="fallback__body">
+      <p>
+        <strong>Error:</strong> {error.toString()}
+      </p>
+      <p>
+        <strong>Stacktrace:</strong> {componentStack}
+      </p>
     </div>
-  );
-}
+  </section>
+);
+
+export default Error;

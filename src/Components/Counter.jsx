@@ -1,12 +1,18 @@
 import React from "react";
 import useCounter from "./useCounter";
 import "../Styles/Counter.css";
+import { Helmet } from "react-helmet-async";
 
 export default function Counter() {
   const { count, dispatch, ACTIONS } = useCounter();
 
   return (
     <div>
+{/* 
+    <Helmet>
+      <title>Counter</title>
+      <meta name="description" content="Counter page" />
+    </Helmet> */}
       <div className="counter-container">
         <input
           type="text"
@@ -20,7 +26,7 @@ export default function Counter() {
           <button
             className="add-btn"
             onClick={() => {
-              dispatch({ type: ACTIONS.INCREASE });
+              dispatch({ type: ACTIONS.ADD });
             }}
           >
             Increment
@@ -28,7 +34,7 @@ export default function Counter() {
           <button
             className="dlt-btn"
             onClick={() => {
-              dispatch({ type: ACTIONS.DECREASE });
+              dispatch({ type: ACTIONS.REDUCE });
             }}
           >
             Decrement
