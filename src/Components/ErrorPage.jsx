@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-// import Button from "@material-ui/core/Button";
+import "../Styles/Error.css";
 
 const ErrorPage = () => {
-  const [count, setCount] = useState(5);
+  const [count, setCount] = useState(7);
 
-  const errorPageClickHandler = e => {
+  const errorPageClickHandler = (e) => {
     e.preventDefault();
     setCount(count - 1);
   };
@@ -14,13 +14,16 @@ const ErrorPage = () => {
   }
 
   return (
-    <button
-      color="primary"
-      variant="outlined"
-      onClick={e => errorPageClickHandler(e)}
-    >
-      Throw Error in {count} clicks.
-    </button>
+    <div className="Error-container">
+      <button
+        color="primary"
+        variant="outlined"
+        className="btn"
+        onClick={(e) => errorPageClickHandler(e)}
+      >
+        Throw Error in {count} clicks.
+      </button>
+    </div>
   );
 };
 

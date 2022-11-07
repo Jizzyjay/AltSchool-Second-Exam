@@ -1,10 +1,10 @@
-// import React from "react";
-// import "./Fallback.scss";
+import React from "react";
+
 
 const Error = ({ componentStack, error }) => (
   <section className="fallback">
     <header className="fallback__header">
-      <h3 className="fallback__title">Oops! An error occured!</h3>
+      <h3 className="fallback__title">Oops! An error occurred!</h3>
     </header>
     <div className="fallback__body">
       <p>
